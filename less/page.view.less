@@ -1,0 +1,193 @@
+
+//
+// View page
+// --------------------------------------------------
+
+.v-item__header {
+  .clearfix();
+  margin-bottom: 40px;
+
+  > .label {
+    float: right;
+    margin-left: 15px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    span {
+      font-weight: bold;
+      color: @brand-dark;
+    }
+
+    > img {
+      margin-top: -6px;
+      width: 30px;
+    }
+  }
+
+  &__price {
+    display: block;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    color: @brand-success;
+  }
+
+  &__info {
+    margin-top: 10px;
+
+    &__item {
+      display: inline-block;
+      margin-right: 18px;
+    }
+  }
+
+  .ia-car-info {
+    display: block;
+  }
+
+  .content__actions {
+    font-size: 18px;
+  }
+
+  &__social {
+    margin-top: 35px;
+  }
+}
+
+
+
+//
+// Gallery
+// --------------------------------------------------
+
+.v-item__gallery {
+  
+  &__item {
+    display: none;
+  }
+
+  + .v-item-info {
+    margin-top: 30px;
+  }
+}
+
+
+
+//
+// Info
+// --------------------------------------------------
+
+.v-item-info {
+
+  &__section {
+
+    & + & {
+      margin-top: 30px;
+    }
+
+    > h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 18px;
+      border-bottom: 2px solid @lines-color;
+      margin: 0 0 20px;
+      padding: 0 0 6px;
+      font-weight: bold;
+      color: #bbb;
+    }
+
+    + .box {
+      margin-top: 30px;
+    }
+  }
+}
+
+.v-item-table {
+  width: 100%;
+
+  td {
+    padding: 10px 0;
+    vertical-align: top;
+    border-bottom: 1px solid @lines-color;
+
+    &:first-child {
+      width: 30%;
+      font-weight: bold;
+    }
+
+    &.-clear:first-child {
+      font-weight: normal;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: 0 none;
+  }
+}
+
+
+
+//
+// Features section
+// --------------------------------------------------
+
+.v-item-features {
+  .clearfix();
+
+  &__item {
+    float: left;
+    width: 260px;
+    margin: 0 20px 10px 0;
+    color: fade(@text-color, 50%);
+    padding-left: 18px;
+    position: relative;
+
+    .fa {
+      position: absolute;
+      left: 0;
+      top: 3px;
+      color: fade(@text-color, 15%);
+    }
+
+    &.active {
+      color: @text-color;
+
+      .fa {
+        color: @text-color;
+      }
+    }
+  }
+}
+
+
+
+//
+// Enquire
+// --------------------------------------------------
+
+.enquire {
+  background: @author-box-bg !important;
+
+  &__header {
+    background: @author-box-additional-bg !important;
+  }
+}
+
+.r-callback {
+  background: @body-bg !important;
+  border-color: @lines-color !important;
+}
+
+.r-callback__toggle, 
+.r-callback__toggle:focus {
+  background: @body-bg !important;
+}
+
+.r-callback__content {
+  border-color: @lines-color !important;
+}

@@ -1,0 +1,205 @@
+
+//
+// Navbar
+// --------------------------------------------------
+
+.navbar-brand {
+  padding: 0;
+  height: auto;
+  margin-right: 20px;
+
+  span {
+    width: 212px;
+    height: 28px;
+    margin: (@inv-height - 28)/2 0;
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+
+    .img-retina(@logo-path, @logo-path2x, 212px, 28px);
+  }
+
+  > img {
+    max-height: 28px;
+    display: inline-block;
+    margin: (@inv-height - 28)/2 0;
+  }
+}
+
+.navbar {
+
+  .dropdown {
+    .clearfix();
+
+    > a {
+      float: left;
+    }
+  }
+}
+
+.navbar-nav__drop {
+  float: right;
+  color: @link-color;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+
+  @media (min-width: @grid-float-breakpoint) {
+    line-height: @line-height-computed;
+    margin-left: -@navbar-padding-horizontal;
+    padding: 0 15px 0 5px;
+  }
+
+  @media (min-width: @grid-float-breakpoint) and (max-width: 840px) {
+    margin-left: -10px;
+  }
+}
+
+@media (min-width: @grid-float-breakpoint) {
+  .nav-account {
+    margin-right: -30px;
+
+    .navbar-fixed-top & {
+      margin-right: -15px;
+    }
+  }
+}
+
+@media (min-width: @screen-sm) and (max-width: 1020px) {
+  a.navbar-btn-wishlist,
+  a.navbar-btn-compare {
+    display: none !important;
+  }
+}
+
+.nav-main {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  > li {
+    border-top: 1px solid @inv-border-color;
+  }
+}
+
+@media (min-width: @grid-float-breakpoint) {
+
+  .nav-main {
+    padding: (@navbar-height - @line-height-computed)/2 0;
+
+    > li {
+      border-top: 0 none;
+
+      > a {
+        text-transform: uppercase;
+        line-height: @line-height-computed;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 15px;
+          right: 15px;
+          top: 50%;
+          height: 2px;
+          background: #fff;
+          .opacity(0);
+          .transition(all .15s ease-in-out);
+        }
+
+        &:hover::before {
+          .opacity(1);
+          top: 125%;
+          background: @link-color;
+        }
+      }
+
+      &.active > a::before { display: none; }
+    }
+  }
+}
+
+// Default navbar
+.navbar-default {
+  margin-bottom: 0;
+  border: 0 none;
+  background: @navbar-default-bg;
+
+  .navbar-nav > .open > a,
+  .navbar-nav > .active > a {
+    background-color: darken(@navbar-default-link-active-bg, 5%);
+  }
+
+  .navbar-toggle {
+    border-color: transparent;
+
+    .icon-bar {
+      background-color: @navbar-default-link-active-color;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: fade(@navbar-default-link-active-color, 70%);
+      background-color: fade(@navbar-default-link-active-color, 30%);
+    }
+  }
+}
+
+.navbar-brand,
+.navbar-nav > li > a {
+  text-shadow: none;
+
+  @media (min-width: @grid-float-breakpoint) and (max-width: 840px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.nav-main {
+  margin-left: -30px;
+
+  &.navbar-right {
+    margin-left: 0;
+    margin-right: -30px;
+  }
+}
+
+.navbar-nav > li {
+
+  > .dropdown-menu {
+
+    @media (min-width: @grid-float-breakpoint) {
+      margin-top: 15px;
+
+      &::before {
+        left: auto;
+        right: 15px;
+      }
+    }
+  }
+}
+
+// Undo rounded corners in static and fixed navbars
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  border-radius: 0;
+  
+}
+
+// Fix active state of dropdown items in collapsed mode
+@media (max-width: @grid-float-breakpoint-max) {
+  .navbar .navbar-nav .open .dropdown-menu > .active > a {
+    &,
+    &:hover,
+    &:focus {
+      color: #fff;
+      #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));
+    }
+  }
+}
