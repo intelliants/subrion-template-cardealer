@@ -6,12 +6,12 @@
   position: fixed;
     left: 0;
     right: 0;
-    bottom: -157px;
+    bottom: -187px;
     z-index: 1999;
   
   background: #fff;
   border-top: 3px solid @brand-success;
-  height: 160px;
+  height: 190px;
 
   &.is-visible {
     .box-shadow(0 0 25px rgba(0,0,0,.3));
@@ -97,6 +97,19 @@
             right: 0;
           }
         }
+      }
+    }
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+    .ia-item {
+
+      &__image {
+        margin-bottom: 5px;
+      }
+
+      &__content {
+        text-align: center;
       }
     }
   }

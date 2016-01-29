@@ -41,13 +41,16 @@ $(function() {
 		navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
 		responsive: {
 			0: {
-				items: 1
+				items: 1,
+				nav: false,
 			},
 			320: {
-				items: 2
+				items: 2,
+				nav: false
 			},
 			500: {
-				items: 3
+				items: 3,
+				nav: false
 			},
 			768: {
 				items: 6
@@ -129,7 +132,7 @@ $(function() {
 			});
 		} else {
 			$ftools.animate({
-				bottom: -157
+				bottom: -187
 			}, 'fast', function() {
 				$ftools.removeClass('is-visible');
 			});
@@ -142,7 +145,7 @@ $(function() {
 		var $ftools = $(this).closest('.f-tools');
 
 		$ftools.animate({
-			bottom: -157
+			bottom: -187
 		}, 'fast', function() {
 			$ftools.removeClass('is-visible');
 		});

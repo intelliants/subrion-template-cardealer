@@ -55,6 +55,13 @@ body {
   }
 }
 
+@media (max-width: @grid-float-breakpoint) {
+  .modal-dialog {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
 
 
 //
@@ -125,6 +132,10 @@ body {
     }
     @media (min-width: @screen-lg-min) {
       width: 100%;
+    }
+
+    @media (max-width: @grid-float-breakpoint) {
+      padding: 0 20px;
     }
   }
 }
@@ -225,6 +236,10 @@ body {
   background: #f2f2f2 url('../img/bg4.jpg') 50% bottom no-repeat;
   padding: @vertical-rhythm*2 0;
 
+  @media (max-width: @grid-float-breakpoint) {
+    padding: @vertical-rhythm 0;
+  }
+
   &__wrp {
     .width-md();
   }
@@ -240,16 +255,24 @@ body {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: @vertical-rhythm*2 0;
+
+  @media (max-width: @grid-float-breakpoint) {
+    padding: @vertical-rhythm 0;
+  }
 }
 
 
 
 //
-// Recent and Featured and
+// Recent and Featured cars
 // --------------------------------------------------
 
 .sec-landing {
   padding: @vertical-rhythm*2 0;
+
+  @media (max-width: @grid-float-breakpoint) {
+    padding: @vertical-rhythm 0;
+  }
 
   &__wrp {
     .width-md();
@@ -289,10 +312,15 @@ body {
           color: @link-color;
           border-color: @link-color;
         }
+
+        @media (max-width: @grid-float-breakpoint) {
+          float: none;
+        }
       }
     }
   }
 }
+
 
 .recent-cars,
 .featured-cars {
@@ -300,6 +328,24 @@ body {
     margin-top: @vertical-rhythm;
   }
 }
+
+@media (max-width: @grid-float-breakpoint) {
+  .featured-cars {
+    .ia-card {
+      margin-left: -10px;
+      margin-right: -10px;
+      padding-bottom: 25px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .row:last-child [class^="col-md-"]:last-child .ia-card {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
 
 // body style
 .body-list {
@@ -365,6 +411,8 @@ body {
 // --------------------------------------------------
 
 .breadcrumbs {
+  // apply commented style to replace search icon button with search phrase button
+  // position: relative; 
   background: @breadcrumb-light-bg;
   padding: 0;
 
@@ -377,6 +425,16 @@ body {
     background: none;
     float: left;
     padding: 0;
+
+    @media (max-width: @grid-float-breakpoint) {
+      white-space: nowrap;
+      overflow: hidden;
+
+      .page-autos_part_view &,
+      .page-autos_service_view & {
+        width: 100%;
+      }
+    }
 
     > li {
       > a,
@@ -404,6 +462,10 @@ body {
   margin: 0 0 @vertical-rhythm*2;
   text-align: center;
 
+  @media (max-width: @grid-float-breakpoint) {
+    margin-bottom: @vertical-rhythm;
+  }
+
   &--accent {
     color: @link-color;
   }
@@ -421,6 +483,10 @@ body {
 .content {
   padding: @vertical-rhythm*2 0;
   background: @content-bg;
+
+  @media (max-width: @grid-float-breakpoint) {
+    padding: @vertical-rhythm 0;
+  }
 
   &__header {
     .clearfix();
@@ -474,6 +540,10 @@ body {
 .news {
   padding: @vertical-rhythm*2 0;
 
+  @media (max-width: @grid-float-breakpoint) {
+    padding: @vertical-rhythm 0;
+  }
+
   &__item {
     .clearfix();
 
@@ -485,6 +555,10 @@ body {
       float: left;
       margin-right: 10px;
       width: 120px;
+
+      @media (min-width: 1400px) {
+        width: 135px;
+      }
     }
 
     h5 {

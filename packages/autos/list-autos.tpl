@@ -44,11 +44,11 @@
 				<li>{accountActions item=$listing itemtype='autos'}</li>
 			</ul>
 		</div>
-		
+
 		<a class="ia-card__title" href="{$listing.link}">{$listing.model}, {$listing.release_year}</a>
 		<p class="ia-card__sub-title">{$listing.price}</p>
 		<div class="ia-car-info">
-			<a class="ia-car-info__icon ia-car-info__icon--body" href="{$listing.link}">{lang key="field_body_type_{$listing.body_type}"}</a>
+			<a class="ia-car-info__icon ia-car-info__icon--body" href="{$smarty.const.IA_URL}search/cars/body:{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>
 			{if $listing.engine}
 				<a class="ia-car-info__icon ia-car-info__icon--engine" href="{$listing.link}">{lang key="field_engine_{$listing.engine}"}{if $listing.engine_type} {lang key="field_engine_type_{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}</a>
 			{/if}
@@ -65,7 +65,7 @@
 		{/if}
 
 		<p class="ia-card__text">
-			<a href="{$listing.link}">{lang key="field_body_type_{$listing.body_type}"}</a>, 
+			<a href="{$smarty.const.IA_URL}search/cars/body:{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>, 
 			{if $listing.engine}
 				{lang key="field_engine_{$listing.engine}"}{if $listing.engine_type} {lang key="field_engine_type_{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}, 
 			{/if}

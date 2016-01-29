@@ -25,6 +25,16 @@
     display: inline-block;
     margin: (@inv-height - 28)/2 0;
   }
+
+  @media (max-width: @grid-float-breakpoint) {
+    display: block;
+    margin-right: 0;
+
+    span {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .navbar {
@@ -71,6 +81,19 @@
   a.navbar-btn-wishlist,
   a.navbar-btn-compare {
     display: none !important;
+  }
+}
+
+// navbar-collapse
+@media (max-width: @grid-float-breakpoint) {
+  .navbar-default .navbar-collapse {
+    clear: both;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.in {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -133,6 +156,11 @@
   .navbar-nav > .open > a,
   .navbar-nav > .active > a {
     background-color: darken(@navbar-default-link-active-bg, 5%);
+
+    @media (max-width: @grid-float-breakpoint) {
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.2);
+    }
   }
 
   .navbar-toggle {
@@ -166,6 +194,29 @@
   &.navbar-right {
     margin-left: 0;
     margin-right: -30px;
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+    margin-left: 0;
+
+    > li {
+
+      > a {
+        padding: 12px 15px;
+        background-color: rgba(0,0,0,0.2);
+      }
+    }
+
+    &.navbar-right {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: @grid-float-breakpoint) {
+  .navbar-nav {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

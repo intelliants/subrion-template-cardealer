@@ -39,8 +39,8 @@
 
 	<screenshots>
 		<screenshot name="1.jpg"><![CDATA[Home page]]></screenshot>
-		<screenshot name="2.jpg"><![CDATA[Search cars with filters]]></screenshot>
-		<screenshot name="3.jpg"><![CDATA[View car page]]></screenshot>
+		<screenshot name="2.jpg"><![CDATA[View car page]]></screenshot>
+		<screenshot name="3.jpg"><![CDATA[Car listings page]]></screenshot>
 	</screenshots>
 
 	<configgroup name="template_cardealer">Template</configgroup>
@@ -101,7 +101,7 @@
 		    name="cardealer_divider2" 
 		    type="divider" 
 		    order="3030">Social links</config>
-	
+
 	<config group="template_cardealer"
 			name="template_social"
 		    type="radio" 
@@ -146,24 +146,26 @@
 
 		<block position="teaser" status="active" sticky="1" header="0" order="99">autos_search</block>
 		<block position="verybottom" status="active" sticky="1" header="0">auto_make_list</block>
-		<block position="landing" status="active" pages="index" header="0" collapsible="0" order="99">auto_body_list</block>
-		<block position="by_year" status="active" pages="index" header="0">auto_year_list</block>
+		<block position="landing" status="active" sticky="0" pages="index" header="0" collapsible="0" order="99">auto_body_list</block>
+		<block position="by_year" status="active" sticky="0" pages="index" header="0">auto_year_list</block>
 		<block position="featured" status="active" sticky="0" pages="index" header="0">auto_featured</block>
 		<block position="recent" status="active" sticky="0" pages="index" header="0" collapsible="0">auto_recent</block>
-		<block position="verytop" status="active" pages="index" header="0" order="99">auto_sponsored</block>
-		<block position="left" status="active" pages="autos_view" header="0" order="2">autos_enquiry_form</block>
-		<block position="left" order="-1" status="active" pages="autos_view" header="0">autos_author</block>
+		<block position="verytop" status="active" sticky="0" pages="index" header="0" order="99">auto_sponsored</block>
+		<block position="left" status="active" sticky="0" pages="autos_view" header="0" order="2">autos_enquiry_form</block>
+		<block position="left" order="-1" status="active" sticky="0" pages="autos_view,autos_part_view" header="0">autos_author</block>
 		<block position="tools" header="0" status="active" sticky="1" order="1">autos_tools</block>
 		<block position="verybottom" header="0" status="active" sticky="0" pages="autos_index,autos_index_latest,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models,autos_services,autos_service_view" order="99">auto_random</block>
 
-		<block position="landing" order="99" status="active" sticky="0" pages="index" header="0">latest_news</block>
-		<block position="left" status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
+		<block position="verybottom" order="99" status="active" sticky="0" pages="index" header="0">latest_news</block>
+		<block position="left" status="active" sticky="0" pages="members,search_autos,autos_index,autos_services,autos_index_featured,autos_parts,autos_index_random,autos_index_latest" classname="box--border">filters</block>
 
 		<block status="inactive" position="left" classname="box--border">common_statistics</block>
 		<block status="inactive">newsline</block>
 		<block status="inactive">blogroll</block>
 		<block status="inactive">new_blog_posts</block>
 		<block status="inactive">blogs_archive</block>
+
+		<page status="inactive">search</page>
 	</changeset>
 
 	<blocks>

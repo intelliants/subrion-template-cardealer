@@ -1,9 +1,13 @@
 $(function() {
 
-	// toggle tooltips
+	//
+	// Toggle tooltips
+	// --------------------------------------------------
+
 	$('[data-toggle="tooltip"]').tooltip({
 		container: 'body'
 	});
+
 
 	//
 	// Utils
@@ -184,6 +188,22 @@ $(function() {
 
 		    	$b.insertAfter($b.next());
 		    }
+		});
+	}
+
+
+	//
+	// Quick Search
+	// --------------------------------------------------
+
+	if ($('#qs-car-price').length) {
+		$('#qs-car-price').ionRangeSlider(
+		{
+			onChange: function(obj)
+			{
+				$('#price_from').val(obj.from);
+				$('#price_to').val(obj.to);
+			}
 		});
 	}
 });

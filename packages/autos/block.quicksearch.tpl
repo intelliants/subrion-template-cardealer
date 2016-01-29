@@ -30,14 +30,32 @@
 								</div>
 							</div>
 
-							<div class="row">
+							<div class="row q-search__inputs__price">
+								<label for="">{lang key='price'}:</label>
+								<input type="text" id="qs-car-price" class="form-control" name="qs-car-price"
+									data-type="double" 
+									data-force-edges="true" 
+									data-postfix=" {$core.config.currency}"
+									data-min="0" 
+									data-max="{if $max_auto_price}{$max_auto_price}{else}350000{/if}" 
+									data-from="{if isset($smarty.get.price[f])}{$smarty.get.price[f]}{else}5000{/if}" 
+									data-to="{if isset($smarty.get.price[t])}{$smarty.get.price[t]}{elseif $max_auto_price}{$max_auto_price}{else}40000{/if}"
+									data-step="1000">
+
+								<input type="hidden" id="price_from" name="price[f]" value="{if isset($smarty.get.price[f])}{$smarty.get.price[f]}{else}0{/if}">
+								<input type="hidden" id="price_to" name="price[t]" value="{if isset($smarty.get.price[t])}{$smarty.get.price[t]}{elseif $max_auto_price}{$max_auto_price}{else}150000{/if}">
+							</div>
+
+							{* <div class="row">
 								<div class="col-md-6">
 									<input class="form-control" type="text" name="price[f]" placeholder="Price min" value="{if isset($smarty.get.price[f])}{$smarty.get.price[f]}{else}{/if}">
 								</div>
 								<div class="col-md-6">
 									<input class="form-control" type="text" name="price[t]" placeholder="Price max" value="{if isset($smarty.get.price[t])}{$smarty.get.price[t]}{else}{/if}">
 								</div>
-							</div>
+							</div> *}
+
+
 
 							<div class="row">
 								<div class="col-md-6">
@@ -103,5 +121,5 @@
 		</form>
 	</div>
 {/if}
-
+	{ia_add_media files='js:_IA_TPL_ion.rangeSlider.min'}
 	{ia_print_js files='_IA_URL_packages/autos/js/front/search'}

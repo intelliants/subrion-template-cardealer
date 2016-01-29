@@ -24,6 +24,26 @@
 		padding: 0 10px;
 		margin-left: 10px;
 		text-decoration: none;
+
+		@media (max-width: @grid-float-breakpoint) {
+			position: absolute;
+
+			// apply these styles to replace search icon button with search phrase button
+			// top: 50px;
+			// left: 50%;
+			// margin-left: -70px;
+
+			top: 110px;
+			left: auto;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			margin-left: 0px;
+			margin-right: 80px;
+			font-size: 22px;
+			overflow: hidden;
+			border-radius: 50%;
+		}
 	}
 
 	&:hover {
@@ -38,6 +58,10 @@
 	background: @search-bg;
 	padding: 30px 45px;
 	.box-shadow(0 0 15px rgba(0,0,0,.2));
+
+	@media (max-width: @grid-float-breakpoint) {
+		padding: 20px 35px;
+	}
 
 	h4 {
 		margin: 0 0 (@vertical-rhythm / 2);
@@ -84,7 +108,7 @@
 
 		[class^="col-md"] {
 			padding: 0 5px;
-			
+
 			&:first-child {
 				padding-left: 0;
 			}
@@ -150,6 +174,35 @@
 		.form-control {
 			margin-bottom: 5px;
 		}
+
+		&__price {
+			padding-top: 10px;
+			padding-bottom: 5px;
+
+			label {
+				float: left;
+				color: #fff;
+				padding: 20px 0;
+				font-weight: bold;
+
+				+ .irs {
+					margin-left: 50px;
+				}
+
+				@media (max-width: @grid-float-breakpoint) {
+					padding: 18px 0;
+					font-size: 16px;
+
+					+ .irs {
+						margin-left: 60px;
+					}
+				}
+			}
+
+			input[type="text"] {
+				visibility: hidden;
+			}
+		}
 	}
 
 	.c-checkbox {
@@ -183,6 +236,17 @@
 		background: @link-color;
 		.box-shadow(none);
 		padding: 30px 15px;
+
+		@media (max-width: @grid-float-breakpoint) {
+			// apply commented style to replace search icon button with search phrase button
+			// top: 90px;
+
+			top: 0;
+
+			.btn-primary {
+				border-color: darken(@btn-primary-bg, 10%);
+			}
+		}
 	}
 }
 
