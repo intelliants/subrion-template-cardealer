@@ -45,97 +45,97 @@
 
 	<configgroup name="template_cardealer">Template</configgroup>
 
-	<config group="template_cardealer" 
-		    name="cardealer_divider1" 
-		    type="divider" 
+	<config group="template_cardealer"
+		    name="cardealer_divider1"
+		    type="divider"
 		    order="3000">General</config>
 
-	<config group="template_cardealer" 
-		    name="max_top_menu_items" 
-		    type="text" 
+	<config group="template_cardealer"
+		    name="max_top_menu_items"
+		    type="text"
 		    description="Max number of items in Main Menu"
 		    order="3002">7</config>
 
 	<config group="template_cardealer"
-		    name="fixed_navbar" 
+		    name="fixed_navbar"
 		    type="hidden"
-		    order="3003" 
-		    values="1,0" 
+		    order="3003"
+		    values="1,0"
 		    description="Fixed navbar">1</config>
 
-	<config group="template_cardealer" 
-		    name="website_bg" 
-		    type="image" 
+	<config group="template_cardealer"
+		    name="website_bg"
+		    type="image"
 		    description="Header background"
 		    order="3006"><![CDATA[]]></config>
 
 	<config group="template_cardealer"
-		    name="tools_as_floating_box" 
+		    name="tools_as_floating_box"
 		    type="radio"
-		    order="3007" 
-		    values="1,0" 
+		    order="3007"
+		    values="1,0"
 		    description="Show Tools in floating box">1</config>
 
-	<config group="template_cardealer" 
-		    name="template_fotorama_car" 
-		    type="select" 
-		    multiplevalues="contain,cover,scaledown,none" 
+	<config group="template_cardealer"
+		    name="template_fotorama_car"
+		    type="select"
+		    multiplevalues="contain,cover,scaledown,none"
 		    description="Fotorama fit method for cars"
 		    order="3008">cover</config>
 
-	<config group="template_cardealer" 
-		    name="template_fotorama_service" 
-		    type="select" 
-		    multiplevalues="contain,cover,scaledown,none" 
+	<config group="template_cardealer"
+		    name="template_fotorama_service"
+		    type="select"
+		    multiplevalues="contain,cover,scaledown,none"
 		    description="Fotorama fit method for services"
 		    order="3009">cover</config>
 
-	<config group="template_cardealer" 
-		    name="template_fotorama_part" 
-		    type="select" 
-		    multiplevalues="contain,cover,scaledown,none" 
+	<config group="template_cardealer"
+		    name="template_fotorama_part"
+		    type="select"
+		    multiplevalues="contain,cover,scaledown,none"
 		    description="Fotorama fit method for parts"
 		    order="3010">contain</config>
 
-	<config group="template_cardealer" 
-		    name="cardealer_divider2" 
-		    type="divider" 
+	<config group="template_cardealer"
+		    name="cardealer_divider2"
+		    type="divider"
 		    order="3030">Social links</config>
 
 	<config group="template_cardealer"
 			name="template_social"
-		    type="radio" 
+		    type="radio"
 		    order="3031"
-		    values="1,0" 
+		    values="1,0"
 		    description="Show links">1</config>
 	<config group="template_cardealer"
 			name="template_social_t"
 		    type="text"
 		    order="3032"
-		    show="template_social|1" 
+		    show="template_social|1"
 		    description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
 	<config group="template_cardealer"
 			name="template_social_f"
-		    type="text" 
-		    order="3033" 
-		    show="template_social|1" 
+		    type="text"
+		    order="3033"
+		    show="template_social|1"
 		    description="Facebook Link">https://www.facebook.com/Intelliants</config>
 	<config group="template_cardealer"
 			name="template_social_g"
-		    type="text" 
-		    order="3034" 
-		    show="template_social|1" 
+		    type="text"
+		    order="3034"
+		    show="template_social|1"
 		    description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
 	<config group="template_cardealer"
 			name="template_social_y"
-		    type="text" 
-		    order="3035" 
-		    show="template_social|1" 
+		    type="text"
+		    order="3035"
+		    show="template_social|1"
 		    description="You Tube Link">#</config>
 
-	<config group="template_cardealer" 
-		    name="ckeditor_css" 
-		    type="hidden" 
+	<config group="template_cardealer"
+		    name="ckeditor_css"
+		    type="hidden"
 		    description="CKEditor CSS"
 		    order="3099">ckeditor.css</config>
 
@@ -169,14 +169,14 @@
 	</changeset>
 
 	<blocks>
-		<block name="welcome" 
-			   title="Welcome" 
-			   position="verytop" 
+		<block name="welcome"
+			   title="Welcome"
+			   position="verytop"
 			   header="0"
-			   collapsible="0" 
+			   collapsible="0"
 			   sticky="0"
-			   pages="index" 
-			   status="active" 
+			   pages="index"
+			   status="active"
 			   order="-1"
 			   type="html">
 			<![CDATA[
@@ -214,26 +214,26 @@
 </div>
 			]]>
 		</block>
-		<block name="footer3" 
-			   title="About cardealer" 
-			   position="footer3" 
+		<block name="footer3"
+			   title="About cardealer"
+			   position="footer3"
 			   header="1"
-			   collapsible="0" 
-			   sticky="1" 
-			   status="active" 
+			   collapsible="0"
+			   sticky="1"
+			   status="active"
 			   type="smarty">
 			<![CDATA[
 <p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
 <p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
 			]]>
 		</block>
-		<block name="footer4" 
-			   title="Contact us" 
-			   position="footer4" 
+		<block name="footer4"
+			   title="Contact us"
+			   position="footer4"
 			   header="1"
-			   collapsible="0" 
-			   sticky="1" 
-			   status="active" 
+			   collapsible="0"
+			   sticky="1"
+			   status="active"
 			   type="smarty">
 			<![CDATA[
 <div class="b-contacts">
@@ -277,5 +277,7 @@
 		<phrase category="frontend" key="tab_featured_cars">Featured cars</phrase>
 		<phrase category="frontend" key="tab_new_cars">Newly added cars</phrase>
 		<phrase category="frontend" key="tab_bodystyle">Search by bodystyle</phrase>
+		<phrase category="frontend" key="our_featured_makes">Our featured makes</phrase>
+		<phrase category="frontend" key="our_featured_makes_tagline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo accusantium recusandae veniam earum dolorum non aperiam eaque.</phrase>
 	</phrases>
 </template>

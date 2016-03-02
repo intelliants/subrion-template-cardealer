@@ -3,8 +3,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<h2>Our featured makes</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo accusantium recusandae veniam earum dolorum non aperiam eaque.</p>
+					<h2>{lang key='our_featured_makes'}</h2>
+					<p>{lang key='our_featured_makes_tagline'}</p>
 				</div>
 				<div class="col-md-8">
 					<div class="owl-carousel pr-list js-carousel-makes">
