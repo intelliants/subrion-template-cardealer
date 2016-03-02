@@ -279,5 +279,7 @@
 		<phrase category="frontend" key="tab_bodystyle">Search by bodystyle</phrase>
 		<phrase category="frontend" key="our_featured_makes">Our featured makes</phrase>
 		<phrase category="frontend" key="our_featured_makes_tagline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo accusantium recusandae veniam earum dolorum non aperiam eaque.</phrase>
+		<phrase category="frontend" key="teaser_title"><![CDATA[Need a car?<br>We have a plenty of variants!]]></phrase>
+		<phrase category="frontend" key="teaser_tagline">buy a new or used car</phrase>
 	</phrases>
 </template>
