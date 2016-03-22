@@ -39,10 +39,10 @@
 								{/if}
 								<p class="ia-card__text">
 									{if $item.engine}
-										{lang key="field_engine_{$item.engine}"}{if $item.engine_type} {lang key="field_engine_type_{$item.engine_type}"}{/if}{if $item.engine_size} {$item.engine_size}{/if}, 
+										{lang key="field_engine_{$item.engine}"}{if $item.engine_type} {lang key="field_engine_type_{$item.engine_type}"}{/if}{if $item.engine_size} {$item.engine_size}{/if},
 									{/if}
 									{if $item.transmission}
-										{lang key="field_transmission_{$item.transmission}"}, 
+										{lang key="field_transmission_{$item.transmission}"},
 									{/if}
 									{lang key="field_exterior_color_{$item.exterior_color}"}
 								</p>
@@ -61,7 +61,7 @@ $(function() {
 		margin: 30,
 		dots: false,
 		nav: true,
-		loop: true,
+		center: true,
 		autoplay:true,
 		autoplayTimeout:2000,
 		autoplayHoverPause:true,

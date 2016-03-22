@@ -3,6 +3,13 @@
 // View page
 // --------------------------------------------------
 
+.v-item {
+
+    + .box {
+        margin-top: @vertical-rhythm;
+    }
+}
+
 .v-item__header {
   .clearfix();
   margin-bottom: 40px;
@@ -66,7 +73,7 @@
 // --------------------------------------------------
 
 .v-item__gallery {
-  
+
   &__item {
     display: none;
   }
@@ -183,7 +190,7 @@
   border-color: @lines-color !important;
 }
 
-.r-callback__toggle, 
+.r-callback__toggle,
 .r-callback__toggle:focus {
   background: @body-bg !important;
 }
