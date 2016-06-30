@@ -165,7 +165,6 @@
 		<block status="inactive">new_blog_posts</block>
 		<block status="inactive">blogs_archive</block>
 
-		<page status="inactive">search</page>
 	</changeset>
 
 	<blocks>
