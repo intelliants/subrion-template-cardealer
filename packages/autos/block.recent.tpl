@@ -5,7 +5,7 @@
 
 				{if $item.auto_pictures}
 					<a class="ia-card__image" href="{$item.link}">
-						{printImage imgfile=$item.auto_pictures[0]['path'] title=$item.model width=80}
+						{ia_image type='thumbnail' file=$item.auto_pictures[0] title=$item.model width=80}
 					</a>
 				{/if}
 
@@ -19,12 +19,12 @@
 					{/if}
 					<p>
 						{if $item.engine}
-							{lang key="field_engine_{$item.engine}"}{if $item.engine_type} {lang key="field_engine_type_{$item.engine_type}"}{/if}{if $item.engine_size} {$item.engine_size}{/if}, 
+							{lang key="field_autos_engine+{$item.engine}"}{if $item.engine_type} {lang key="field_autos_engine_type+{$item.engine_type}"}{/if}{if $item.engine_size} {$item.engine_size}{/if},
 						{/if}
 						{if $item.transmission}
-							{lang key="field_transmission_{$item.transmission}"}, 
+							{lang key="field_autos_transmission+{$item.transmission}"},
 						{/if}
-						{lang key="field_exterior_color_{$item.exterior_color}"}
+						{lang key="field_autos_exterior_color+{$item.exterior_color}"}
 					</p>
 				</div>
 			</div>

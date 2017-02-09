@@ -47,7 +47,7 @@
 			 data-allowfullscreen="true"
 			 data-fit="{$core.config.template_fotorama_part}">
 			{foreach $pics as $entry}
-				<a class="v-item__gallery__item" href="{printImage imgfile=$entry.path url=true fullimage=true}">{printImage imgfile=$entry.path title=$entry.title}</a>
+				<a class="v-item__gallery__item" href="{ia_image file=$entry url=true type='large'}">{ia_image type='large' file=$entry}</a>
 			{/foreach}
 		</div>
 	</div>

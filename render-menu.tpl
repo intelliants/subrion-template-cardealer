@@ -7,7 +7,7 @@
 		<ul class="inv__nav">
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-					{printImage imgfile=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=20}
+					{ia_image type='thumbnail' file=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=20}
 
 					<span class="hidden-xs">{$member.fullname|default:$member.username}</span>
 				</a>
