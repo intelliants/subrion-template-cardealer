@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<template name="cardealer">
+<module type="template" name="cardealer">
 	<title>CarDealer</title>
 	<summary>Template for Subrion Autos Script</summary>
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>1.0.2</version>
-	<date>2016-03-22</date>
+	<version>1.1.0</version>
+	<date>2017-03-09</date>
 	<compatibility>4.1</compatibility>
 
 	<dependency type="package" exist="1">autos</dependency>
@@ -79,21 +79,21 @@
 	<config group="template_cardealer"
 		    name="template_fotorama_car"
 		    type="select"
-		    multiplevalues="contain,cover,scaledown,none"
+		    values="contain,cover,scaledown,none"
 		    description="Fotorama fit method for cars"
 		    order="3008">cover</config>
 
 	<config group="template_cardealer"
 		    name="template_fotorama_service"
 		    type="select"
-		    multiplevalues="contain,cover,scaledown,none"
+		    values="contain,cover,scaledown,none"
 		    description="Fotorama fit method for services"
 		    order="3009">cover</config>
 
 	<config group="template_cardealer"
 		    name="template_fotorama_part"
 		    type="select"
-		    multiplevalues="contain,cover,scaledown,none"
+		    values="contain,cover,scaledown,none"
 		    description="Fotorama fit method for parts"
 		    order="3010">contain</config>
 
@@ -164,7 +164,6 @@
 		<block status="inactive">blogroll</block>
 		<block status="inactive">new_blog_posts</block>
 		<block status="inactive">blogs_archive</block>
-
 	</changeset>
 
 	<blocks>
@@ -281,4 +280,4 @@
 		<phrase category="frontend" key="teaser_title"><![CDATA[Need a car?<br>We have a plenty of variants!]]></phrase>
 		<phrase category="frontend" key="teaser_tagline">buy a new or used car</phrase>
 	</phrases>
-</template>
+</module>

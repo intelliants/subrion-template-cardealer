@@ -122,4 +122,4 @@
 	</div>
 {/if}
 	{ia_add_media files='js:_IA_TPL_ion.rangeSlider.min'}
-	{ia_print_js files='_IA_URL_packages/autos/js/front/search'}
+	{ia_print_js files='_IA_URL_modules/autos/js/front/search'}

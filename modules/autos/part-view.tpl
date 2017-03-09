@@ -18,7 +18,7 @@
 		</h2>
 		<div class="v-item__header__price">{$core.config.currency} {$item.price}</div>
 		<div class="v-item__header__info">
-			{if isset($item.part_number) && $item.part_number}
+			{if !empty($item.part_number)}
 				<span class="v-item__header__info__item pull-right">#{$item.part_number}</span>
 			{/if}
 			{if $item.sponsored}<span class="v-item__header__info__item label label-warning">{lang key='sponsored'}</span>{/if}
@@ -37,7 +37,6 @@
 
 {if !empty($item.pictures)}
 	{ia_add_media files='fotorama'}
-	{$pics=unserialize($item.pictures)}
 
 	<div class="v-item__gallery">
 		<div class="fotorama" 
@@ -46,7 +45,7 @@
 			 data-ratio="800/400"
 			 data-allowfullscreen="true"
 			 data-fit="{$core.config.template_fotorama_part}">
-			{foreach $pics as $entry}
+			{foreach $item.pictures as $entry}
 				<a class="v-item__gallery__item" href="{ia_image file=$entry url=true type='large'}">{ia_image type='large' file=$entry}</a>
 			{/foreach}
 		</div>

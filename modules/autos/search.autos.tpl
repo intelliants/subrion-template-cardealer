@@ -1,4 +1,4 @@
-{if isset($listings) && $listings}
+{if !empty($listings)}
 	<div class="ia-cards">
 		<div class="ia-cards__items{if isset($smarty.cookies.cardsLayout)} -{$smarty.cookies.cardsLayout}{/if}">
 			<div class="row">

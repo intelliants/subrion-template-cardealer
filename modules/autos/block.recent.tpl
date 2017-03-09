@@ -3,9 +3,9 @@
 		{foreach $car_blocks_data.recent as $item}
 			<div class="ia-card ia-card--hsm -{$item.status}">
 
-				{if $item.auto_pictures}
+				{if $item.pictures}
 					<a class="ia-card__image" href="{$item.link}">
-						{ia_image type='thumbnail' file=$item.auto_pictures[0] title=$item.model width=80}
+						{ia_image type='thumbnail' file=$item.pictures[0] title=$item.model width=80}
 					</a>
 				{/if}
 
